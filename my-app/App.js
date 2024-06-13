@@ -1,107 +1,108 @@
 import { StatusBar } from 'expo-status-bar';
-import { Image, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Image, StyleSheet, Text, TextInput, View, ScrollView } from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
 
-            <View style={styles.statusBar}>
-                <View style={styles.LeftSide}>
-                  <Text style={styles.time}>9:41</Text>
+      <ScrollView>
+              <View style={styles.statusBar}>
+                    <View style={styles.LeftSide}>
+                      <Text style={styles.time}>9:41</Text>
+                    </View>
+                    <View style={styles.notch}>
+                    </View>
+                    <View style={styles.RightSide}>
+                    <Image source={require('./assets/Right Side.jpg')}/>
+                    </View>
                 </View>
-                <View style={styles.notch}>
-                </View>
-                <View style={styles.RightSide}>
-                <Image source={require('./assets/Right Side.jpg')}/>
-                </View>
-            </View>
 
-            <View style={styles.Group42andImage}>
+                <View style={styles.Group42andImage}>
 
-              <View style={styles.Group42}>
+                  <View style={styles.Group42}>
 
-                <View>
-                  <Text style={styles.Headline1}>Eric Atsu</Text>
+                    <View>
+                      <Text style={styles.Headline1}>Eric Atsu</Text>
+                    </View>
+
+                      <View>
+                      <Text style={styles.Headline2}>eric@gmail.com</Text>
+                      </View>
+
+                  </View>
+                  
+                  <View>
+                  <Image style={styles.ellipseImage} source={require('./assets/Ellipse.jpg')}/>
+                  </View>
+
                 </View>
+
+                <View style={styles.textinputandFilter}>
 
                   <View>
-                  <Text style={styles.Headline2}>eric@gmail.com</Text>
+                  <TextInput  style={styles.textinput}  placeholder= '  Search a job or position'/>
                   </View>
 
-              </View>
-              
-              <View>
-              <Image style={styles.ellipseImage} source={require('./assets/Ellipse.jpg')}/>
-              </View>
+                  <View style={styles.rectangle10}>
+                <Image style={styles.filterimage} source={require('./assets/filter.5.jpg')}/>
+                </View>
+                
+                  
+                </View>
 
-            </View>
+                <View style={styles.featuredJobs}>
+                  <Text style={styles.featuredJobsHeader}>Featured Jobs</Text>
+                  <Text style={styles.seeAll}>See all</Text>
+                </View>
 
-            <View style={styles.textinputandFilter}>
+                <View style={styles.jobs} >
 
-              <View>
-              <TextInput  style={styles.textinput}  placeholder= '  Search a job or position'/>
-              </View>
+                    <View style={styles.GreenBG}>
 
-              <View style={styles.rectangle10}>
-             <Image style={styles.filterimage} source={require('./assets/filter.5.jpg')}/>
-             </View>
-            
-              
-            </View>
+                    <View style={styles.Group7}>
 
-            <View style={styles.featuredJobs}>
-              <Text style={styles.featuredJobsHeader}>Featured Jobs</Text>
-              <Text style={styles.seeAll}>See all</Text>
-            </View>
+                      <View style={styles.rectangle4}>
+                      <Image style={styles.companyImage} source={require('./assets/Vector.jpg')}/>
+                      </View>
 
-            <View style={styles.jobs} >
+                      <View>
+                        <Text style={styles.jobname}>Software Engineer</Text>
+                        <Text style={styles.company}>Facebook</Text>
+                      </View>
 
-                 <View style={styles.GreenBG}>
+                    </View>
 
-                <View style={styles.Group7}>
+                    <View style={styles.Group6}>
+                      <Text style={styles.Money}>$180,00</Text>
+                      <Text style={styles.location}>Accra, Ghana</Text>
+                    </View>
 
-                  <View style={styles.rectangle4}>
-                  <Image style={styles.companyImage} source={require('./assets/Vector.jpg')}/>
+                    </View>
+
+
+                    <View style={styles.GreenBG2}>
+
+                  <View style={styles.Group7}>
+
+                    <View style={styles.rectangle4}>
+                    <Image style={styles.companyImage} source={require('./assets/grommet-icons_google.jpg')}/>
+                    </View>
+
+                    <View>
+                      <Text style={styles.jobname}>Software Engineer</Text>
+                      <Text style={styles.company}>Google</Text>
+                    </View>
+
                   </View>
 
-                  <View>
-                    <Text style={styles.jobname}>Software Engineer</Text>
-                    <Text style={styles.company}>Facebook</Text>
+                  <View style={styles.Group6}>
+                    <Text style={styles.Money}>$160,00</Text>
+                    <Text style={styles.location}>Accra, Ghana</Text>
                   </View>
 
                 </View>
 
-                <View style={styles.Group6}>
-                  <Text style={styles.Money}>$180,00</Text>
-                  <Text style={styles.location}>Accra, Ghana</Text>
-                </View>
-
-                </View>
-
-
-                <View style={styles.GreenBG2}>
-
-              <View style={styles.Group7}>
-
-                <View style={styles.rectangle4}>
-                <Image style={styles.companyImage} source={require('./assets/grommet-icons_google.jpg')}/>
-                </View>
-
-                <View>
-                  <Text style={styles.jobname}>Software Engineer</Text>
-                  <Text style={styles.company}>Google</Text>
-                </View>
-
               </View>
-
-              <View style={styles.Group6}>
-                <Text style={styles.Money}>$160,00</Text>
-                <Text style={styles.location}>Accra, Ghana</Text>
-              </View>
-
-            </View>
-
-          </View>
 
             <View style={styles.popularJobs}>
               <Text style={styles.popularJobsHeader}>Popular Jobs</Text>
@@ -147,8 +148,6 @@ export default function App() {
 
             </View>
 
-
-
             <View style={styles.rectangle58}>
 
             <View>
@@ -157,15 +156,55 @@ export default function App() {
 
             <View>
               <Text style={styles.JobTitle}>Product Manager</Text>
-              <Text style={styles.company2}>Fcaebook</Text>
+              <Text style={styles.company2}>Facebook</Text>
             </View>
 
             <View>
-            <Text style={styles.salary}>$86,000/y</Text>
+            <Text style={styles.salary}>$85,000/y</Text>
             <Text style={styles.location2}>Florida, US</Text>
             </View>
 
             </View>
+
+            <View style={styles.rectangle58}>
+
+            <View>
+            <Image style={styles.googleImage2} source={require('./assets/grommet-icons_google.jpg')}/>
+            </View>
+
+            <View>
+              <Text style={styles.JobTitle}>Sales Executive</Text>
+              <Text style={styles.company2}>Google</Text>
+            </View>
+
+            <View>
+            <Text style={styles.salary}>$100,000/y</Text>
+            <Text style={styles.location2}>Georgia, US</Text>
+            </View>
+
+            </View>
+
+
+                          <View style={styles.rectangle58}>
+
+              <View>
+              <Image style={styles.facebookImage2} source={require('./assets/Vector.jpg')}/>
+              </View>
+
+              <View>
+                <Text style={styles.JobTitle}>Product Manager</Text>
+                <Text style={styles.company2}>Facebook</Text>
+              </View>
+
+              <View>
+              <Text style={styles.salary}>$85,000/y</Text>
+              <Text style={styles.location2}>Florida, US</Text>
+              </View>
+
+              </View>
+
+        
+      </ScrollView>
 
     </View>
   );
@@ -402,6 +441,11 @@ beatsImage: {
 facebookImage2: {
   width:40,
   height:39.76,
+  left:15,
+},
+googleImage2: {
+  width:40,
+  height:40,
   left:15,
 },
 JobTitle: {
