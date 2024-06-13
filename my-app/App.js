@@ -167,10 +167,6 @@ export default function App() {
 
             </View>
 
-
-
-        
-
     </View>
   );
 }
