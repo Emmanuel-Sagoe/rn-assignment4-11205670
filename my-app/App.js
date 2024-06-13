@@ -6,6 +6,7 @@ export default function App() {
     <View style={styles.container}>
 
       <ScrollView>
+        
               <View style={styles.statusBar}>
                     <View style={styles.LeftSide}>
                       <Text style={styles.time}>9:41</Text>
@@ -46,63 +47,71 @@ export default function App() {
                   <View style={styles.rectangle10}>
                 <Image style={styles.filterimage} source={require('./assets/filter.5.jpg')}/>
                 </View>
-                
                   
                 </View>
+
+                
 
                 <View style={styles.featuredJobs}>
                   <Text style={styles.featuredJobsHeader}>Featured Jobs</Text>
                   <Text style={styles.seeAll}>See all</Text>
                 </View>
 
+
+                
+                <ScrollView  style={styles.horizontalscollview} horizontal={true}>
+               
                 <View style={styles.jobs} >
 
-                    <View style={styles.GreenBG}>
+                <View style={styles.GreenBG}>
 
-                    <View style={styles.Group7}>
+                <View style={styles.Group7}>
 
-                      <View style={styles.rectangle4}>
-                      <Image style={styles.companyImage} source={require('./assets/Vector.jpg')}/>
-                      </View>
-
-                      <View>
-                        <Text style={styles.jobname}>Software Engineer</Text>
-                        <Text style={styles.company}>Facebook</Text>
-                      </View>
-
-                    </View>
-
-                    <View style={styles.Group6}>
-                      <Text style={styles.Money}>$180,00</Text>
-                      <Text style={styles.location}>Accra, Ghana</Text>
-                    </View>
-
-                    </View>
-
-
-                    <View style={styles.GreenBG2}>
-
-                  <View style={styles.Group7}>
-
-                    <View style={styles.rectangle4}>
-                    <Image style={styles.companyImage} source={require('./assets/grommet-icons_google.jpg')}/>
-                    </View>
-
-                    <View>
-                      <Text style={styles.jobname}>Software Engineer</Text>
-                      <Text style={styles.company}>Google</Text>
-                    </View>
-
+                  <View style={styles.rectangle4}>
+                  <Image style={styles.companyImage} source={require('./assets/Vector.jpg')}/>
                   </View>
 
-                  <View style={styles.Group6}>
-                    <Text style={styles.Money}>$160,00</Text>
-                    <Text style={styles.location}>Accra, Ghana</Text>
+                  <View>
+                    <Text style={styles.jobname}>Software Engineer</Text>
+                    <Text style={styles.company}>Facebook</Text>
                   </View>
 
                 </View>
 
-              </View>
+                <View style={styles.Group6}>
+                  <Text style={styles.Money}>$180,00</Text>
+                  <Text style={styles.location}>Accra, Ghana</Text>
+                </View>
+
+                </View>
+
+
+                <View style={styles.GreenBG2}>
+
+                <View style={styles.Group7}>
+
+                <View style={styles.rectangle4}>
+                <Image style={styles.companyImage} source={require('./assets/grommet-icons_google.jpg')}/>
+                </View>
+
+                <View>
+                  <Text style={styles.jobname}>Software Engineer</Text>
+                  <Text style={styles.company}>Google</Text>
+                </View>
+
+                </View>
+
+                <View style={styles.Group6}>
+                <Text style={styles.Money}>$160,00</Text>
+                <Text style={styles.location}>Accra, Ghana</Text>
+                </View>
+
+                </View>
+
+                </View>
+               </ScrollView>
+
+              
 
             <View style={styles.popularJobs}>
               <Text style={styles.popularJobsHeader}>Popular Jobs</Text>
@@ -329,6 +338,7 @@ GreenBG: {
   paddingTop:24,
   paddingLeft:24,
   marginRight:10,
+  marginTop:-50
 },
   GreenBG2: {
     width:260,
@@ -340,6 +350,7 @@ GreenBG: {
     paddingTop:24,
     paddingLeft:24,
     marginRight:10,
+    marginTop:-50
 },
 Group7: {
   width:207,
@@ -369,7 +380,7 @@ color:'#FFFFFF',
 },
 company: {
 width:68,
-height:21,
+height:25,
 opacity:75,
 fontSize:14,
 lineHeight:30,
@@ -476,5 +487,10 @@ location2: {
   fontSize:13,
   lineHeight:20.8,
   color:'#95969D',
+},
+horizontalscollview: {
+  height:220,
+  marginTop:50,
+  marginBottom:-80.5,
 },
 });
