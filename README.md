@@ -32,6 +32,6 @@ Usage: Used to create and organize styles for the components.
 
 # Screenshot of App
 
-![Login page](./assets/Login%20page%20Screenshot.png)
+![Login page](./my-app/assets/Login%20page%20Screenshot.png)
 
-![Homepage](./assets/Homepage%20Screenshot.png)
+![Homepage](./my-app/assets/Homepage%20Screenshot.png)
