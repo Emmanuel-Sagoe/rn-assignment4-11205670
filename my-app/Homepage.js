@@ -6,15 +6,6 @@ export default function Homepage({ route }) {
   return (
     <View style={styles.container}>
       <ScrollView>
-        <View style={styles.statusBar}>
-          <View style={styles.LeftSide}>
-            <Text style={styles.time}>9:41</Text>
-          </View>
-          <View style={styles.notch}></View>
-          <View style={styles.RightSide}>
-            <Image source={require('./assets/Right Side.jpg')} />
-          </View>
-        </View>
         <View style={styles.Group42andImage}>
           <View style={styles.Group42}>
             <View>
@@ -26,9 +17,12 @@ export default function Homepage({ route }) {
           </View>
           <View>
             <Image style={styles.ellipseImage} source={require('./assets/Ellipse.jpg')} />
+            <Image style={styles.redEllipse} source={require('./assets/Ellipse 767.jpg')} />
+            <Image style={styles.Ellipse798} source={require('./assets/Ellipse 798.jpg')} />
           </View>
         </View>
         <View style={styles.textinputandFilter}>
+        <Image style={styles.searchIcon} source={require('./assets/Search.jpg')} />
           <View>
             <TextInput style={styles.textinput} placeholder='  Search a job or position' />
           </View>
@@ -76,7 +70,7 @@ export default function Homepage({ route }) {
         </ScrollView>
         <View style={styles.popularJobs}>
           <Text style={styles.popularJobsHeader}>Popular Jobs</Text>
-          <Text style={styles.seeAll}>See all</Text>
+          <Text style={styles.seeAll2}>See all</Text>
         </View>
         <View style={styles.rectangle58}>
           <View>
@@ -153,32 +147,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#FAFAFD', 
   },
-  time: {
-    left:15,
-  },
-  statusBar: {
-    display:  "flex",
-    flexDirection: "row",
-    width:375,
-    height:44,
-  },
-  LeftSide: {
-width:54,
-height:21,
-top:12,
-left:24,
-borderRadius:24,
-  },
-  RightSide: {
-    width:66.66,
-    height:11.34,
-    top:17.33,
-    left:230.67,
-  },
-notch: {
-  top: -2,
-  left:78,
-},
+
 Group42: {
   width: 254,
   height: 55,
@@ -192,12 +161,12 @@ marginBottom: 0,
 Headline2: {
 fontSize:20,
 color:'#95969D',
-top:-8,
+top:-4,
 },
 Group42andImage: {
    display: 'flex',
   flexDirection: 'row',
-  top: 1,
+  top: 40,
 },
 ellipseImage: {
 width:54,
@@ -205,19 +174,38 @@ height:54,
 left:35,
 top:6,
 },
+redEllipse: {
+top:-41,
+left:75,
+height:8,
+width:8,
+zIndex:100,
+},
+Ellipse798: {
+  top:-52,
+  left:72,
+  zIndex:90,
+  width:14,
+  height:14,
+  borderRadius:50,
+  },
 textinput: {
   height:48,
   top:30,
-  left:24,
   backgroundColor:'#F2F2F3',
   width:254,
   borderRadius:12,
   paddingLeft:50,
 },
+searchIcon:{
+top:45,
+left:50,
+zIndex:1,
+},
 filterimage: {
   width:26,
   height:26,
-  Color:'#F2F2F3',
+  backgroundColor:'#F2F2F3',
   left:11.5,
   top:11,
   backgroundColor:'#F2F2F3',
@@ -227,15 +215,16 @@ height:48,
 width:48,
 backgroundColor:'#F2F2F3',
 top:30,
-left:35,
+left:20,
 borderRadius:12,
 },
 textinputandFilter: {
   display: 'flex',
   flexDirection: 'row',
+  top:20,
 },
 featuredJobs: {
-  top:50,
+  top:10,
   left:24,
   display: 'flex',
   flexDirection: 'row',
@@ -246,8 +235,10 @@ featuredJobsHeader: {
   fontSize:16,
   color:'#0D0D26',
   lineHeight:20.8,
+  top:60,
 },
 seeAll: {
+top:60,
 color:'#95969D',
 fontSize:14,
 left:154,
@@ -261,7 +252,7 @@ jobs: {
 GreenBG: {
   width:260,
   height:186,
-  top:70,
+  top:65,
   left:24,
   backgroundColor:'#5386E4',
   borderRadius:24,
@@ -273,7 +264,7 @@ GreenBG: {
   GreenBG2: {
     width:260,
     height:186,
-    top:70,
+    top:65,
     left:24,
     backgroundColor:'#0D0D26',
     borderRadius:24,
@@ -339,7 +330,7 @@ color:'#FFFFFF',
 left:75,
 },
 popularJobs: {
-  top:90,
+  top:60,
   left:24,
   display: 'flex',
   flexDirection: 'row',
@@ -351,12 +342,19 @@ popularJobsHeader: {
   color:'#0D0D26',
   lineHeight:20.8,
 },
+seeAll2:{
+color:'#95969D',
+fontSize:14,
+left:154,
+width:42,
+height:17,
+},
 rectangle58: {
-  top:110,
+  top:80,
   left:24,
   backgroundColor:'#FFFFFF',
   borderRadius:20,
-  marginBottom:15,
+  marginBottom:10,
   width:307,
   height:74,
   display: 'flex',
@@ -419,8 +417,8 @@ location2: {
   color:'#95969D',
 },
 horizontalscollview: {
-  height:220,
-  marginTop:50,
-  marginBottom:-80.5,
+  height:215,
+  marginTop:70,
+  marginBottom:-60.5,
 },
 });

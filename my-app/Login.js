@@ -11,15 +11,6 @@ export default function Login({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <View style={styles.statusBar}>
-        <View style={styles.LeftSide}>
-          <Text style={styles.time}>9:41</Text>
-        </View>
-        <View style={styles.notch}></View>
-        <View style={styles.RightSide}>
-          <Image source={require('./assets/Right Side.jpg')} />
-        </View>
-      </View>
       <Text style={styles.jobizz}>Jobizz</Text>
       <View style={styles.Group46}>
         <Text style={styles.Headline}>Welcome Back 👋</Text>
